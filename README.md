@@ -1,16 +1,124 @@
-# React + Vite
+# 🎬 Netflix Clone (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern Netflix-inspired web application built using **React** and **Vite**, featuring a clean UI and real-time movie data fetched from APIs.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+* 🔥 Modern Netflix-style UI
+* 🎞️ Dynamic movie & TV show listings
+* 🔍 Search functionality
+* 📡 API integration for real-time data
+* ⚡ Fast performance with Vite
+* 🎨 Responsive design for all devices
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **Frontend:** React
+* **Build Tool:** Vite
+* **Styling:** CSS / Tailwind / Styled Components
+* **API:** TMDB API
+* **Linting:** ESLint
+
+---
+
+## 📦 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/kritikhatri/netflix-clone
+cd netflix-clone
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Start development server
+
+```bash
+npm run dev
+```
+
+---
+
+## 🔑 Environment Variables
+
+Create a `.env` file in the root directory and add:
+
+```env
+VITE_API_KEY=your_api_key_here
+```
+
+> ⚠️ Never commit your `.env` file to GitHub
+
+---
+
+## 📁 Project Structure (Basic)
+
+```
+netflix-clone/
+│── src/
+│   ├── components/
+│   ├── pages/
+│   ├── hooks/
+│   ├── utils/
+│   └── App.jsx
+│── public/
+│── package.json
+```
+
+---
+
+## 🧠 Future Improvements
+
+* ✅ Authentication (Login/Signup)
+* 🎥 Video player integration
+* ❤️ Watchlist / Favorites
+* 🌙 Dark mode toggle
+* 📱 Better mobile UI
+
+---
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your branch:
+
+   ```bash
+   git checkout -b feature-name
+   ```
+3. Commit your changes:
+
+   ```bash
+   git commit -m "Add feature"
+   ```
+4. Push to your branch:
+
+   ```bash
+   git push origin feature-name
+   ```
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is for educational purposes only.
+
+---
+
+## 🙌 Acknowledgements
+
+* Inspired by Netflix UI
+* APIs used for movie data
+
+---
+
+> Built with ❤️ using React
