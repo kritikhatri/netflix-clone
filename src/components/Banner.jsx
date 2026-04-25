@@ -24,7 +24,7 @@ export default function Banner() {
         setLoading(false);
       });
   }, []);
-if (loading) return <div className="banner banner--loading" />;
+  if (loading) return <div className="banner banner--loading" />;
   if (!show) return null;
  
   const title = show.name;
