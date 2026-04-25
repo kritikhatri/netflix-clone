@@ -1,106 +1,19 @@
-body {
+*,
+*::before,
+*::after {
   margin: 0;
-  background-color: #111;
-  color: white;
-  font-family: Arial, sans-serif;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.app {
+ 
+html {
+  scroll-behavior: smooth;
+}
+ 
+body {
+  background-color: #141414;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
   min-height: 100vh;
-}
-
-/* Navbar */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  background: linear-gradient(to bottom, black, transparent);
-  z-index: 100;
-}
-
-.logo {
-  color: #e50914;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.nav-links span {
-  margin: 0 10px;
-  cursor: pointer;
-}
-
-.avatar {
-  border-radius: 4px;
-}
-
-/* Banner */
-.banner {
-  height: 75vh;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  padding: 40px;
-}
-
-.banner-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, black, transparent);
-}
-
-.banner-content {
-  position: relative;
-  max-width: 500px;
-}
-
-.banner-buttons button {
-  margin-right: 10px;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-}
-
-.play-btn {
-  background: white;
-  color: black;
-}
-
-.info-btn {
-  background: gray;
-  color: white;
-}
-
-/* Rows */
-.rows {
-  margin-top: -100px;
-  padding: 20px;
-}
-
-.row {
-  margin-bottom: 30px;
-}
-
-.row-posters {
-  display: flex;
-  overflow-x: scroll;
-}
-
-.poster {
-  margin-right: 10px;
-  transition: transform 0.3s;
-}
-
-.poster:hover {
-  transform: scale(1.1);
-}
-
-.poster img {
-  width: 250px;
-  border-radius: 5px;
 }
