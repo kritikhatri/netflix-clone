@@ -1,0 +1,15 @@
+/* Intro splash screen */
+.intro-screen {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.intro-logo {
+  width: 200px;
+  animation: netflixIntro 2.5s ease forwards;
+}
