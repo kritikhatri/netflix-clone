@@ -1,0 +1,151 @@
+.banner {
+  position: relative;
+  height: 85vh;
+  min-height: 500px;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 120px;
+}
+
+.banner--skeleton {
+  background: linear-gradient(135deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
+  animation: shimmer 1.5s infinite;
+}
+
+/* Bottom fade gradient — makes content readable */
+.banner__overlay-bottom {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    var(--netflix-dark) 0%,
+    rgba(20,20,20,0.6) 40%,
+    transparent 70%
+  );
+}
+
+/* Left fade gradient for cinematic look */
+.banner__overlay-side {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(20,20,20,0.8) 0%,
+    rgba(20,20,20,0.3) 50%,
+    transparent 100%
+  );
+}
+
+.banner__content {
+  position: relative;
+  z-index: 1;
+  padding: 0 4%;
+  max-width: 650px;
+  animation: slideInLeft 0.6s ease;
+}
+
+/* Genre tags */
+.banner__tags {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.banner__tag {
+  font-size: 12px;
+  color: var(--netflix-light-gray);
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 2px 10px;
+  border-radius: 2px;
+  backdrop-filter: blur(4px);
+}
+
+.banner__title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 12px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+  letter-spacing: -0.5px;
+}
+
+.banner__meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.banner__rating { color: #f5c518; font-weight: 600; font-size: 15px; }
+.banner__year   { color: var(--netflix-light-gray); font-size: 14px; }
+.banner__badge  {
+  background: var(--netflix-red);
+  color: #fff;
+  padding: 1px 6px;
+  border-radius: 2px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.banner__description {
+  font-size: clamp(14px, 1.5vw, 16px);
+  color: rgba(255,255,255,0.85);
+  line-height: 1.6;
+  margin-bottom: 28px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+/* Buttons */
+.banner__buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.banner__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.banner__btn svg { width: 20px; height: 20px; }
+
+.banner__btn--play {
+  background: var(--netflix-white);
+  color: #000;
+}
+
+.banner__btn--play:hover {
+  background: rgba(255,255,255,0.85);
+  transform: scale(1.03);
+}
+
+.banner__btn--list {
+  background: rgba(109,109,110,0.7);
+  color: var(--netflix-white);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.banner__btn--list:hover { background: rgba(109,109,110,0.9); }
+.banner__btn--list--active { background: rgba(229,9,20,0.4); border-color: var(--netflix-red); }
+
+.banner__btn--info {
+  background: rgba(109,109,110,0.5);
+  color: var(--netflix-white);
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.banner__btn--info:hover { background: rgba(109,109,110,0.8); }
+
+@media (max-width: 768px) {
+  .banner { height: 70vh; padding-bottom: 80px; }
+  .banner__btn  { padding: 8px 16px; font-size: 14px; }
+  .banner__description { display: none; }
+}

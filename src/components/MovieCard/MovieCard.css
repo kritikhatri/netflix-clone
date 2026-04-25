@@ -1,0 +1,124 @@
+.card {
+  position: relative;
+  flex-shrink: 0;
+  width: 200px;
+  scroll-snap-align: start;
+  border-radius: var(--border-radius);
+  overflow: visible;
+  transition: transform var(--transition-med), z-index 0s var(--transition-med);
+  cursor: pointer;
+}
+
+.card--large { width: 280px; }
+
+/* Zoom on hover */
+.card--hovered {
+  transform: scale(1.18);
+  z-index: 100;
+  transition: transform var(--transition-med);
+}
+
+/* Poster */
+.card__poster-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2/3;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+
+.card--large .card__poster-wrap { aspect-ratio: 16/9; }
+
+.card__poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-med);
+}
+
+.card--hovered .card__poster { transform: scale(1.05); }
+
+/* Hover overlay */
+.card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.97) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 12px;
+  animation: fadeIn 0.15s ease;
+  border-radius: var(--border-radius);
+}
+
+.card__info { margin-bottom: 10px; }
+
+.card__title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--netflix-white);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.card__meta {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.card__rating { color: #f5c518; font-size: 11px; font-weight: 600; }
+.card__year   { color: var(--netflix-light-gray); font-size: 11px; }
+
+.card__overview {
+  font-size: 11px;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.4;
+}
+
+/* Action buttons row */
+.card__actions {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.card__btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.card__btn svg { width: 14px; height: 14px; }
+
+.card__btn--play {
+  background: var(--netflix-white);
+  color: #000;
+  width: 36px;
+  height: 36px;
+}
+
+.card__btn--play:hover { background: rgba(255,255,255,0.85); transform: scale(1.1); }
+
+.card__btn--list {
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.7);
+  color: var(--netflix-white);
+}
+
+.card__btn--list:hover { border-color: var(--netflix-white); transform: scale(1.05); }
+.card__btn--list.active { background: var(--netflix-red); border-color: var(--netflix-red); }
+
+.card__btn--info {
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.7);
+  color: var(--netflix-white);
+  margin-left: auto;
+}
+
+.card__btn--info:hover { border-color: var(--netflix-white); }

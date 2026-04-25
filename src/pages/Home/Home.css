@@ -1,0 +1,20 @@
+.home { background: var(--netflix-dark); min-height: 100vh; }
+
+/* Pull rows up slightly to overlap banner bottom */
+.home__rows { margin-top: -80px; position: relative; z-index: 2; }
+
+/* Intro screen */
+.intro-screen {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.intro-logo {
+  width: 200px;
+  animation: netflixIntro 2.5s ease forwards;
+}

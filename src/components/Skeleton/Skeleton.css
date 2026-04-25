@@ -1,0 +1,23 @@
+.skeleton {
+  flex-shrink: 0;
+  width: 200px;
+  scroll-snap-align: start;
+}
+
+.skeleton--large { width: 280px; }
+
+.skeleton__poster {
+  width: 100%;
+  aspect-ratio: 2/3;
+  border-radius: var(--border-radius);
+  background: linear-gradient(
+    90deg,
+    var(--shimmer-dark) 25%,
+    var(--shimmer-light) 50%,
+    var(--shimmer-dark) 75%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 1.4s ease infinite;
+}
+
+.skeleton--large .skeleton__poster { aspect-ratio: 16/9; }
