@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
  
-const API_KEY = "f32dd59daa91e44dcaecf8b04a864170"; 
+const API_KEY = import.meta.env.VITE_TMDB_API_KEY; 
 const BASE_URL = "https://api.themoviedb.org/3";
 const IMG_URL = "https://image.tmdb.org/t/p/original";
  
@@ -107,4 +107,3 @@ function InfoIcon() {
     </svg>
   );
 }
- 
