@@ -1,0 +1,66 @@
+.mylist-page {
+  background: var(--netflix-dark);
+  min-height: 100vh;
+}
+
+.mylist-page__inner {
+  padding-top: 100px;
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-bottom: 60px;
+}
+
+.mylist-page__title {
+  font-size: clamp(24px, 4vw, 36px);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.mylist-page__count {
+  color: var(--netflix-gray);
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.mylist-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+/* Empty state */
+.mylist-page__empty {
+  text-align: center;
+  padding: 100px 20px;
+  animation: fadeIn 0.4s ease;
+}
+
+.mylist-page__empty-icon {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.mylist-page__empty h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.mylist-page__empty p {
+  color: var(--netflix-gray);
+  margin-bottom: 28px;
+}
+
+.mylist-page__browse-btn {
+  background: var(--netflix-red);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.mylist-page__browse-btn:hover {
+  background: var(--netflix-red-hover);
+  transform: scale(1.02);
+}
