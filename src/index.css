@@ -78,3 +78,50 @@ img {
 .navbar--scrolled {
   background: #141414;
 }
+.navbar__left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 28px;
+}
+ 
+.navbar__logo {
+  color: #e50914;
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  font-family: "Arial Black", Arial, sans-serif;
+  cursor: pointer;
+  white-space: nowrap;
+}
+ 
+.navbar__links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 18px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ 
+.navbar__link-item {
+  display: inline-flex;
+}
+ 
+.navbar__link {
+  font-size: 14px;
+  color: #e5e5e5;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+ 
+.navbar__link:hover {
+  color: #b3b3b3;
+}
+ 
+.navbar__link--active {
+  color: #ffffff;
+  font-weight: 700;
+}
